@@ -460,11 +460,3 @@ super.functionOnParent([arguments]); // 调用父类中的方法
 
 ### 小结
 本文对JavaScript的面向对象机制进行了较为深入的解读，尤其是构造函数和原型链方式实现对象的创建、继承、以及实例化。 此外，本文还简要介绍了如在ES6中编写面向对象代码。
-
-### References
-[详解Javascript中的Object对象](http://luopq.com/2016/02/28/Object-in-Javascript)
-[new操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
-[JavaScript面向对象简介](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
-[Object.create()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
-[继承与原型链](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-[Understanding the prototype property in JavaScript](http://bytearcher.com/articles/understanding-prototype-property-in-javascript/)

@@ -304,6 +304,5 @@ hello('weiwei', function(a) {
 
 ### 参考资料
 [Understanding Scope and Context in JavaScript](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
-JavaScript高级程序设计，section 4.2
 [Arrow functions vs. bind()](http://www.2ality.com/2016/02/arrow-functions-vs-bind.html)
 [理解与使用Javascript中的回调函数](http://www.html-js.com/article/Sexy-Javascript-understand-the-callback-function-with-the-use-of-Javascript-in)

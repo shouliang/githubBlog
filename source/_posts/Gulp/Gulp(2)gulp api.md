@@ -77,13 +77,14 @@ __options.base__
 类型： String ， 设置输出路径以某个路径的某个组成部分为基础向后拼接。
 
 如, 请想像一下在一个路径为 client/js/somedir 的目录中，有一个文件叫 somefile.js ：
-```
-gulp.src('client/js/\*\*/\*.js') // 匹配 'client/js/somedir/somefile.js' 现在 'base' 的值为 'client/js/'
+```javascript
+// 匹配 'client/js/somedir/somefile.js'现在 'base' 的值为 'client/js/'
+gulp.src('client/js/\*\*/\*.js')  
   .pipe(minify())
-  .pipe(gulp.dest('build'));  // 写入 'build/somedir/somefile.js' 将'client/js/'替换为build 
-gulp.src('client/js/\*\*/*.js', { base: 'client' }) // base 的值为 'client'
+  .pipe(gulp.dest('build')); 
+gulp.src('client/js/\*\*/*.js', { base: 'client' }) 
   .pipe(minify())
-  .pipe(gulp.dest('build'));  // 写入 'build/js/somedir/somefile.js' 将'client'替换为build
+  .pipe(gulp.dest('build'));  
 ```
 
 ### 4.写文件

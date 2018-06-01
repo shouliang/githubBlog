@@ -66,6 +66,7 @@ db.collection.update(query,update,{upsert:boolean,multi:boolean});
 query：查询条件，文档，和find中的查询条件写法一致。
 
 update：修改内容，文档。
+
 upsert(可选)：如果值为true，那么当集合中没有匹配文档时，创建文档。默认false。
 
 multi(可选)：如果值为true，那么将更新全部符合条件的文档，否则仅更新一个文档，默认false。

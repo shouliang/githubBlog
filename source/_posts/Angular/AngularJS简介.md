@@ -1,5 +1,5 @@
 title: 一.简介
-date: 2016-07-31 16:410:23
+date: 2016-07-31 15:45:21
 tags: [Angular]
 ---
 
@@ -59,10 +59,10 @@ Angular.js应用的动态性和响应能力，都要归功于指令属性，常�
 ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自动初始化应用和标记应用根作用域，同时载入和指令内容相关的模块，并通过拥有ng-app指令的标签为根节点开始编译其中的DOM。
 
 引用方法很简单，如下所示：
- 
+
 	<div ng-app="">
 	</div>  
-  
+
 
 如上引用，一个AngularJS应用程序初始化就完成了并标记了作用域，也就是div元素就是AngularJS应用程序的所有者，在它里面的指令也就会被Angular编译器所编译、解析了。
 
@@ -71,22 +71,22 @@ ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自�
 g-init指令初始化应用程序数据，也就是为AngularJS应用程序定义初始值，通常情况下，我们会使用一个控制器或模块来代替它，后面我们会介绍有关控制器和模块的知识。
 
 如下所示，我们为应用程序变量name赋定初始值。
- 
+
 	<div ng-app="" ng-init="name='Hello World'">
 	</div>
- 
+
 
 我们不仅可以赋值字符串，也可以赋值为数字、数组、对象，而且可以为多个变量赋初始值，如下所示：
- 
+
 	<div ng-app="" ng-init="quantity=1;price=5">
 	</div>
- 
+
 
 //或者
- 
+
 	<div ng-app="" ng-init="names=['Tom','Jerry','Gaffey']">
 	</div>
- 
+
 
 ### 6.数据绑定：表达式
 ---
@@ -135,8 +135,8 @@ ng-model把相关处理事件绑定到指定标签上，这样我们就可以不
 如下使用ng-bind指令绑定把应用程序数据。
 
 	<div ng-app="">
-    		请输入一个名字：<input type="text" ng-model="name" />
-    		Hello <span ng-bind="name"></span>
+			请输入一个名字：<input type="text" ng-model="name" />
+			Hello <span ng-bind="name"></span>
 	</div>
 
 
