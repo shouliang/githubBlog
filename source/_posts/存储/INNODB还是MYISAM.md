@@ -1,4 +1,4 @@
-title: MYSQL: INNODB还是MYISAM?
+title: INNODB还是MYISAM
 date: 2017-01-05 14:45:23
 
 tags: [存储]
