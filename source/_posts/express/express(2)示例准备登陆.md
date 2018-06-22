@@ -14,8 +14,10 @@ ejs模板安装方法
 npm install ejs
 ```
 1.目录下安装好了之后，如何调用呢，如下所示：
-//指定渲染模板文件的后缀名为ejs
+```
+// 指定渲染模板文件的后缀名为ejs
 app.set('view engine', 'ejs');
+```
 2.默认ejs模板只支持渲染以ejs为扩展名的文件，可能在使用的时候会觉得它的代码书写方式很不爽还是想用html的形式去书写，该怎么办呢，这时就得去修改模板引擎了，也就会用到express的engine函数。
 
 3.engine注册模板引擎的函数，处理指定的后缀名文件。
@@ -61,9 +63,9 @@ PS：express.static —— 指定静态文件的查找目录。
 ```
 <div style="height:400px;width:550px;margin:50px auto;margin-left:auto;border:solid 1px;background: rgb(246, 246, 253);">
     <div style="margin-left: 35px;">
-# 首页
+        # 首页
         <form action="#"  role="form" style="margin-top: 90px;margin-left: 60px;"> 
-# 欢迎进入首页！
+            # 欢迎进入首页！
             <div style="margin-top: 145px;">
                 <input type="button" value="登 陆" />
             </div>
@@ -80,7 +82,7 @@ PS：express.static —— 指定静态文件的查找目录。
 ... 
 <div style="height:300px;width:350px;margin:100px auto;margin-left:auto;border:solid 1px;background: rgb(246, 246, 253);">
     <div style="width:200px;margin:auto;margin-top:50px;"> 
-# 用户登录
+        # 用户登录
         <form action="#"  role="form" method="post" >
             <input id="username" type="text" name="username" style="margin: 20px 0px;" />
             <input id="password" type="password" name="password" />
@@ -96,9 +98,9 @@ PS：express.static —— 指定静态文件的查找目录。
 ```
 <div style="height:400px;width:550px;margin:50px auto;margin-left:auto;border:solid 1px;background: rgb(246, 246, 253);">
     <div style="margin-left: 45px;">
-# 主页
+        # 主页
         <form action="#"  role="form" style="margin-top: 90px;">
-# 登陆成功！
+            # 登陆成功！
             <div style="margin-top: 145px;">
                 <input  type="button" value="退 出" />
             </div>
