@@ -1,8 +1,8 @@
-title:nodejs调试工具之heapdump简介
+title: nodejs调试工具之heapdump简介
 date: 2016-12-05 22:16:53
 
-tags: [Node错误处理和调试]
----
+## tags: [Node错误处理和调试]
+
 # nodejs调试工具之heapdump简介
 
 ######  原文：https://leokongwq.github.io/2016/11/08/nodejs-heapdump.html
