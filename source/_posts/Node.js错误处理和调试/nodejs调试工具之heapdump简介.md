@@ -1,7 +1,7 @@
 title:nodejs调试工具之heapdump简介
-date: 2016-12-06 22:16:53
+date: 2016-12-05 22:16:53
 
-tags: [Node.js错误处理&调试]
+tags: [Node错误处理和调试]
 ---
 # nodejs调试工具之heapdump简介
 

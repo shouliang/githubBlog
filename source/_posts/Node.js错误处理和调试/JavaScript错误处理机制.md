@@ -1,6 +1,6 @@
 title: JavaScript错误处理机制
 date: 2016-04-04 22:16:53
-tags: [Node.js错误处理&调试]
+tags: [Node错误处理和调试]
 ---
 # JavaScript错误处理机制
 

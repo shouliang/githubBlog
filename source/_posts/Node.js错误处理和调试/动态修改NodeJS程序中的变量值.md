@@ -1,7 +1,7 @@
-title:动态修改NodeJS程序中的变量值
-date: 2016-04-06 22:16:53
+title: 动态修改Node程序中的变量值
+date: 2016-04-12 22:16:53
 
-tags: [Node.js错误处理&调试]
+tags: [Node错误处理和调试]
 ---
 # 动态修改 NodeJS 程序中的变量值
 

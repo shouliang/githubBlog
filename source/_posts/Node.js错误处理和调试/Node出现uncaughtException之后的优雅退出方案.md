@@ -1,6 +1,6 @@
 title: Node出现uncaughtException之后的优雅退出方案
 date: 2016-04-05 22:16:53
-tags: [Node.js错误处理&调试]
+tags: [Node错误处理和调试]
 ---
 ###### 原文：http://www.infoq.com/cn/articles/quit-scheme-of-node-uncaughtexception-emergence
 Node 的异步特性是它最大的魅力，但是在带来便利的同时也带来了不少麻烦和坑，错误捕获就是一个。由于 Node 的异步特性，导致我们无法使用 try/catch 来捕获回调函数中的异常，例如:

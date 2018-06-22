@@ -1,6 +1,6 @@
 title: CPU profiling
 date: 2016-04-10 22:16:53
-tags: [Node.js错误处理&调试]
+tags: [Node错误处理和调试]
 ---
 # Easy profiling for Node.js Applications
 
