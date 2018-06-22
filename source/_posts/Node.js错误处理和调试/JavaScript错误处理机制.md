@@ -2,8 +2,6 @@ title: JavaScript错误处理机制
 date: 2016-04-04 22:16:53
 tags: [Node错误处理和调试]
 ---
-# JavaScript错误处理机制
-
 ######  原文：http://javascript.ruanyifeng.com/grammar/error.html
 ## Error 实例对象
 

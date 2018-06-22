@@ -2,8 +2,6 @@ title: CPU profiling
 date: 2016-04-10 22:16:53
 tags: [Node错误处理和调试]
 ---
-# Easy profiling for Node.js Applications
-
 ######  原文：https://nodejs.org/en/docs/guides/simple-profiling/
 There are many third party tools available for profiling Node.js applications but, in many cases, the easiest option is to use the Node.js built in profiler. The built in profiler uses the [profiler inside V8](https://developers.google.com/v8/profiler_example) which samples the stack at regular intervals during program execution. It records the results of these samples, along with important optimization events such as jit compiles, as a series of ticks:
 

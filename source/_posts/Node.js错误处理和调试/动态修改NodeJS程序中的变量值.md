@@ -3,8 +3,6 @@ date: 2016-04-12 22:16:53
 
 tags: [Node错误处理和调试]
 ---
-# 动态修改 NodeJS 程序中的变量值
-
 ######  原文：http://code.oneapm.com/nodejs/2015/06/27/intereference/
 ## 启动一个 HTTP Server
 
