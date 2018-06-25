@@ -3,7 +3,6 @@ date: 2016-04-12 22:16:53
 
 tags: [Node错误处理和调试]
 ---
-######  原文：http://code.oneapm.com/nodejs/2015/06/27/intereference/
 ## 启动一个 HTTP Server
 
 用简单的 Hello World 做例子吧，不过略作修改。在 `global` 下放一个变量 `message`， 然后打印出来：
@@ -132,3 +131,5 @@ function modifyTheMessage(newMessage) {
 - Chrome 调试
 
 由于 Chrome 也是基于 V8 的，上述方法也可以用于 Chrome 相关的功能集成
+
+原文：http://code.oneapm.com/nodejs/2015/06/27/intereference/

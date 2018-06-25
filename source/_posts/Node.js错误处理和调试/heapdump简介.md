@@ -3,7 +3,6 @@ date: 2016-04-15 22:16:53
 
 tags: [Node错误处理和调试]
 ---
-######  原文：https://leokongwq.github.io/2016/11/08/nodejs-heapdump.html
 ### heapdump工具介绍
 
 > `heapdump` 是一个非常有用的node内存调试工具. 它能够在运行时将V8的堆dump到文件中. 这样我们就可以通过chrome的带的的开发者工具查看当时的内存占用情况,帮助我们分析一些内存问题.

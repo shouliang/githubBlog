@@ -2,7 +2,6 @@ title: Node出现uncaughtException之后的优雅退出方案
 date: 2016-04-05 22:16:53
 tags: [Node错误处理和调试]
 ---
-###### 原文：http://www.infoq.com/cn/articles/quit-scheme-of-node-uncaughtexception-emergence
 Node 的异步特性是它最大的魅力，但是在带来便利的同时也带来了不少麻烦和坑，错误捕获就是一个。由于 Node 的异步特性，导致我们无法使用 try/catch 来捕获回调函数中的异常，例如:
 
 ```javascript
@@ -339,5 +338,7 @@ process.on('uncaughtException', function (err) {
 ## 小节
 
 说了这么多，结论是，目前为止(Node 0.10.25)，依然没有一个完美的方案来解决任意异常的优雅退出问题。用 `domain` 来捕获大部分异常，并且通过 `uncaughtException` 避免程序 crash 是目前来说最理想的方案。回调异常的退出问题在遇到 cluster 以后会更加复杂，特别是对于连接关闭的处理要格外小心。
+
+原文：http://www.infoq.com/cn/articles/quit-scheme-of-node-uncaughtexception-emergence
 
 

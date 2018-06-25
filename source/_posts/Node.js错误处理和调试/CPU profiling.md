@@ -2,7 +2,6 @@ title: CPU profiling
 date: 2016-04-10 22:16:53
 tags: [Node错误处理和调试]
 ---
-######  原文：https://nodejs.org/en/docs/guides/simple-profiling/
 There are many third party tools available for profiling Node.js applications but, in many cases, the easiest option is to use the Node.js built in profiler. The built in profiler uses the [profiler inside V8](https://developers.google.com/v8/profiler_example) which samples the stack at regular intervals during program execution. It records the results of these samples, along with important optimization events such as jit compiles, as a series of ticks:
 
 ```
@@ -212,3 +211,5 @@ Percentage of the requests served within a certain time (ms)
 Yay! Your app is now serving about 20 requests per second, roughly 4 times more than it was with the synchronous hash generation. Additionally, the average latency is down from the 4 seconds before to just over 1 second.
 
 Hopefully, through the performance investigation of this (admittedly contrived) example, you've seen how the V8 tick processor can help you gain a better understanding of the performance of your Node.js applications.
+
+原文：https://nodejs.org/en/docs/guides/simple-profiling/

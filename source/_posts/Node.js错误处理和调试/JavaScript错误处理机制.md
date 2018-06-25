@@ -2,7 +2,6 @@ title: JavaScript错误处理机制
 date: 2016-04-04 22:16:53
 tags: [Node错误处理和调试]
 ---
-######  原文：http://javascript.ruanyifeng.com/grammar/error.html
 ## Error 实例对象
 
 JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。JavaScript 原生提供`Error`构造函数，所有抛出的错误都是这个构造函数的实例。
@@ -433,3 +432,5 @@ try {
 ```
 
 上面代码中，进入`catch`代码块之后，一遇到`throw`语句，就会去执行`finally`代码块，其中有`return false`语句，因此就直接返回了，不再会回去执行`catch`代码块剩下的部分了。
+
+原文：http://javascript.ruanyifeng.com/grammar/error.html
