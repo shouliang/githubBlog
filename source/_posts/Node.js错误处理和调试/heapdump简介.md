@@ -47,14 +47,12 @@ env NODE_HEAPDUMP_OPTIONS=fork node script.js
 ### 分析快照信息
 
 1. 打开chrome控制台
-
-![chrome-devtool-profile.png](https://leokongwq.github.io/2016/11/08/nodejs-heapdump/chrome-devtool-profile.png)
+![](http://7xq1il.com1.z0.glb.clouddn.com/chrome-devtool-profile.png)
 
 1. 加载快照文件
 
 点击`load`按钮, 选择文件就可以加载快照文件了.
-
-![chrome-nodejs-heapdump.png](https://leokongwq.github.io/2016/11/08/nodejs-heapdump/chrome-nodejs-heapdump.png)
+![](http://7xq1il.com1.z0.glb.clouddn.com/chrome-nodejs-heapdump.png)
 
 ### 配套工具 memwatch-next
 
