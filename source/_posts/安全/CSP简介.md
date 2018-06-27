@@ -101,8 +101,8 @@ Content-Security-Policy: default-src 'self'; ...; report-uri /my_amazing_csp_rep
 
 ## 三、Content-Security-Policy-Report-Only
 除了`Content-Security-Policy`，还有一个`Content-Security-Policy-Report-Only`字段，表示不执行限制选项，只是记录违反限制的行为。
-
 它必须与`report-uri`选项配合使用。
+
 ```javascript
 Content-Security-Policy-Report-Only: default-src 'self'; ...; report-uri /my_amazing_csp_report_parser;
 ```
@@ -123,8 +123,8 @@ Content-Security-Policy: script-src 'self' https://apis.google.com
 
 如果同一个限制选项使用多次，只有第一次会生效。
 ```javascript
-# 错误的写法
-script-src https://host1.com; script-src https://host2.com
+ # 错误的写法
+ script-src https://host1.com; script-src https://host2.com
 
  # 正确的写法
  script-src https://host1.com https://host2.com
