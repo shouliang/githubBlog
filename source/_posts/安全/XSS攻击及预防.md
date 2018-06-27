@@ -104,5 +104,13 @@ alert('xss')">
 幸好，由于XSS臭名昭著历史悠久又极其危险，现代web开发框架如`vue.js`、`react.js`等，在设计的时候就考虑了XSS攻击对html插值进行了更进一步的抽象、过滤和转义，我们只要熟练正确地使用他们，就可以在大部分情况下避免XSS攻击。
 同时，许多基于`MVVM`框架的`SPA`（单页应用）不需要刷新URL来控制view，这样大大防止了XSS隐患。另外，我们还可以用一些防火墙来阻止XSS的运行。
 
+## 参考
+https://blog.csdn.net/ghsau/article/details/17027893
+
+https://www.imooc.com/article/13553
+
+https://blog.csdn.net/u011781521/article/details/53894399
+
+https://elemefe.github.io/node-interview/#/sections/zh-cn/security?id=xss
 
 

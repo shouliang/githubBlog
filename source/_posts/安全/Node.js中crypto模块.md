@@ -2,7 +2,10 @@ title: Node.js中的crypto模块
 date: 2017-02-12 14:45:23
 tags: [安全]
 ---
+原文：https://www.cnblogs.com/chyingp/p/nodejs-learning-crypto-theory.html
+
 ## 一、 概述
+
 互联网时代，网络上的数据量每天都在以惊人的速度增长。同时，各类网络安全问题层出不穷。在信息安全重要性日益凸显的今天，作为一名开发者，需要加强对安全的认识，并通过技术手段增强服务的安全性。
 
 `crypto`模块是nodejs的核心模块之一，它提供了安全相关的功能，如摘要运算、加密、电子签名等。很多初学者对着长长的API列表，不知如何上手，因此它背后涉及了大量安全领域的知识。
@@ -231,5 +234,7 @@ IV的大小跟数据块的大小有关（128位），跟秘钥的长度无关。
 [Block cipher mode of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
 
 [RSA的公钥和私钥到底哪个才是用来加密和哪个用来解密？ - 刘巍然-学酥的回答 - 知乎](https://www.zhihu.com/question/25912483/answer/31653639)
+
+
 
 

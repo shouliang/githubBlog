@@ -11,8 +11,6 @@ CSRF（Cross-Site Request Forgery，跨站点伪造请求，也被称为：one c
 
 ![](http://7xq1il.com1.z0.glb.clouddn.com/csrf.jpg)
 
-
-
 从上图可以看出，要完成一次CSRF攻击，受害者必须依次完成以下两个步骤：
 
 - 登录受信任网站A，并在本地生成Cookie。
@@ -59,3 +57,8 @@ GET接口能够直接将请求地址暴露给攻击者，所以要防止CSRF一�
 
 ### 在HTTP头部添加自定义属性
 这种方法也是使用token并验证，但是它是把token放在HTTP请求头部中。通过使用AJAX我们可以在我们的请求头部中添加我们的自定义属性，但是这种方法要求我们将整个站的请求全部改成AJAX，如果是新站还好，老站的话无疑是需要重写整个站点的，这是很不可取的。
+
+## 参考：
+https://www.cnblogs.com/cxying93/p/6035031.html
+https://www.ibm.com/developerworks/cn/web/1102_niugang_csrf/index.html
+https://www.imooc.com/article/18069
