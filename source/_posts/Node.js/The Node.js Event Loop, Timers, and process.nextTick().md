@@ -1,4 +1,4 @@
-title: The Node.js Event Loop, Timers, and `process.nextTick()
+title: The Node.js Event Loop, Timers, and process.nextTick()
 
 date: 2016-08-05 22:16:53
 
@@ -10,7 +10,7 @@ tags: [Node.js]
 
 The event loop is what allows Node.js to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded — by offloading operations to the system kernel whenever possible.
 
-Since most modern kernels are multi-threaded, they can handle multiple operations executing in the background. When one of these operations completes, the kernel tells Node.js so that the appropriate callback may be added to the **poll** queue to eventually be executed. We'll explain this in further detail later in this topic.
+Since most modern kernels are **multi-threaded**, they can handle multiple operations executing in the background. When one of these operations completes, the kernel tells Node.js so that the appropriate callback may be added to the **poll** queue to eventually be executed. We'll explain this in further detail later in this topic.
 
 ## Event Loop Explained
 
@@ -41,9 +41,9 @@ The following diagram shows a simplified overview of the event loop's order of o
 
 *note: each box will be referred to as a "phase" of the event loop.*
 
-Each phase has a FIFO queue of callbacks to execute. While each phase is special in its own way, generally, when the event loop enters a given phase, it will perform any operations specific to that phase, then execute callbacks in that phase's queue until the queue has been exhausted or the maximum number of callbacks has executed. When the queue has been exhausted or the callback limit is reached, the event loop will move to the next phase, and so on.
+Each phase has a FIFO queue of callbacks to execute. While each phase is special in its own way, generally, when the event loop enters a given phase, it will perform any operations specific to that phase, then execute callbacks in that phase's queue until the queue has been **exhausted** or the **maximu**m number of callbacks has executed. When the queue has been exhausted or the callback limit is reached, the event loop will move to the next phase, and so on.
 
-Since any of these operations may schedule *more* operations and new events processed in the **poll** phase are queued by the kernel, poll events can be queued while polling events are being processed. As a result, long running callbacks can allow the poll phase to run much longer than a timer's threshold. See the [**timers**](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#timers) and [**poll**](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#poll) sections for more details.
+Since **any** of these operations **may** schedule *more* operations and new events processed in the **poll** phase are queued by the kernel, poll events can be queued while polling events are being processed. As a result, long running callbacks can allow the poll phase to run much longer than a timer's threshold. See the [**timers**](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#timers) and [**poll**](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#poll) sections for more details.
 
 **\*NOTE:** There is a slight discrepancy between the Windows and the Unix/Linux implementation, but that's not important for this demonstration. The most important parts are here. There are actually seven or eight steps, but the ones we care about — ones that Node.js actually uses - are those above.*
 
@@ -62,7 +62,7 @@ Between each run of the event loop, Node.js checks if it is waiting for any asyn
 
 ### timers
 
-A timer specifies the **threshold** *after which* a provided callback *may be executed* rather than the **exact** time a person *wants it to be executed*. Timers callbacks will run as early as they can be scheduled after the specified amount of time has passed; however, Operating System scheduling or the running of other callbacks may delay them.
+A timer specifies the **threshold** *after which* a provided callback *may be executed* rather than the **exact** time a person *wants it to be executed*. Timers callbacks will run as early as they can be scheduled after the specified amount of time has passed; however, Operating System scheduling or the running of other callbacks **may delay** them.
 
 **\*Note**: Technically, the **poll** phase controls when timers are executed.*
 
@@ -122,7 +122,7 @@ Once the **poll** queue is empty the event loop will check for timers *whose tim
 
 ### check
 
-This phase allows a person to execute callbacks immediately after the **poll** phase has completed. If the **poll** phase becomes idle and scripts have been queued with `setImmediate()`, the event loop may continue to the **check** phase rather than waiting.
+This phase allows a person to execute callbacks immediately after the **poll** phase has **completed**. If the **poll** phase becomes idle and scripts have been queued with `setImmediate()`, the event loop may continue to the **check** phase rather than waiting.
 
 `setImmediate()` is actually a special timer that runs in a separate phase of the event loop. It uses a libuv API that schedules callbacks to execute after the **poll** phase has completed.
 
@@ -136,12 +136,12 @@ If a socket or handle is closed abruptly (e.g. `socket.destroy()`), the `'close'
 
 `setImmediate` and `setTimeout()` are similar, but behave in different ways depending on when they are called.
 
-- `setImmediate()` is designed to execute a script once the current **poll** phase completes.
+- `setImmediate()` is designed to execute a script once the current **poll** phase **completes**.
 - `setTimeout()` schedules a script to be run after a minimum threshold in ms has elapsed.
 
 The order in which the timers are executed will vary depending on the context in which they are called. If both are called from within the main module, then timing will be bound by the performance of the process (which can be impacted by other applications running on the machine).
 
-For example, if we run the following script which is not within an I/O cycle (i.e. the main module), the order in which the two timers are executed is non-deterministic, as it is bound by the performance of the process:
+For example, if we run the following script which is not within an I/O cycle (i.e. the main module), the order in which the two timers are executed is **non-deterministic**, as it is bound by the performance of the process:
 
 ```
 // timeout_vs_immediate.js
@@ -164,7 +164,7 @@ immediate
 timeout
 ```
 
-However, if you move the two calls within an I/O cycle, the immediate callback is always executed first:
+However, if you move the two calls within an I/O cycle, the immediate callback is always executed **first**:
 
 ```
 // timeout_vs_immediate.js
@@ -198,7 +198,7 @@ The main advantage to using `setImmediate()` over `setTimeout()` is `setImmediat
 
 You may have noticed that `process.nextTick()` was not displayed in the diagram, even though it's a part of the asynchronous API. This is because `process.nextTick()` is not technically part of the event loop. Instead, the `nextTickQueue` will be processed after the current operation completes, regardless of the current phase of the event loop.
 
-Looking back at our diagram, any time you call `process.nextTick()` in a given phase, all callbacks passed to `process.nextTick()` will be resolved before the event loop continues. This can create some bad situations because **it allows you to "starve" your I/O by making recursive process.nextTick() calls**, which prevents the event loop from reaching the **poll** phase.
+Looking back at our diagram, any time you call `process.nextTick()` in a given phase, all callbacks passed to `process.nextTick()` will be resolved **before** the event loop continues. This can create some bad situations because **it allows you to "starve" your I/O by making recursive process.nextTick() calls**, which prevents the event loop from reaching the **poll** phase.
 
 ### Why would that be allowed?
 
