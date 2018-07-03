@@ -1,6 +1,6 @@
 title: 一.快速开始
 date: 2014-06-05 14:45:23
-tags: [Mocha]
+tags: [测试]
 ---
 
 ### 1.什么是mocha

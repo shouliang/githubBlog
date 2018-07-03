@@ -1,6 +1,6 @@
 title: 三.hook机制和测试技巧
 date: 2014-06-10 16:45:23
-tags: [Mocha]
+tags: [测试]
 ---
 
 ### 1.hook机制

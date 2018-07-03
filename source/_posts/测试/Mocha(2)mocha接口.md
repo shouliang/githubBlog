@@ -1,6 +1,6 @@
 title: 二.mocha接口
 date: 2014-06-08 15:45:23
-tags: [Mocha]
+tags: [测试]
 ---
 
 ### 1.BDD行为驱动开发
