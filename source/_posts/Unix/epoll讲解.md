@@ -1,6 +1,6 @@
 title: epoll讲解
 date: 2012-07-04 14:45:23
-tags: [Linux]
+tags: [Unix]
 ---
 
 首先我们来定义流的概念，一个流可以是文件，socket，pipe等等可以进行I/O操作的内核对象。
