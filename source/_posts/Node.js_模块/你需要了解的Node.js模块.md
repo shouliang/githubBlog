@@ -423,7 +423,7 @@ console.log(addon.hello());
 
 我们可以在 require.extensions 中看到实际支持的三个扩展名：
 
-![img](https://static.oschina.net/uploads/space/2017/0321/141359_083Q_2903254.png)
+![img](http://7xq1il.com1.z0.glb.clouddn.com/require_180724.png)
 
 看看每个扩展名对应的函数，你就清楚 Node 在怎么使用它们。它使用 module._compile 处理 .js 文件，使用 JSON.parse 处理 .json 文件，以及使用 process.dlopen 处理 .node 文件。
 

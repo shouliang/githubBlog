@@ -23,4 +23,4 @@ CDN主要功能是在不同的地点缓存内容，通过负载均衡技术，�
 **动态加速**直播网站
 **应用加速**手机APP
 
-原文：https://www.zhihu.com/question/37353035
+#### 原文：https://www.zhihu.com/question/37353035

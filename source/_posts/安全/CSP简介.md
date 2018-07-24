@@ -206,4 +206,4 @@ Content-Security-Policy: script-src 'sha256-qznLcsROx4GACP2dm0UCKCzCG-HiZ1guq6ZZ
 
 上面的代码中，虽然加载的脚本来自当前域名，但是通过改写回调函数，攻击者依然可以执行恶意代码。
 
-原文：http://www.ruanyifeng.com/blog/2016/09/csp.html
+### 原文：http://www.ruanyifeng.com/blog/2016/09/csp.html

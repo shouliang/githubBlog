@@ -15,7 +15,7 @@ Node.js 开发一般不容易遇到真正的模块循环依赖的情况，可是
 
 官网上点出了这种模块循环的情况，并且解释清楚了原因（但并没有给出具体可行的解决方案）：
 
-> When `main.js` loads `a.js`, then `a.js` in turn loads `b.js`. At that point, `b.js` tries to load `a.js`. In order to prevent an infinite loop, an **unfinished copy** of the `a.js`exports object is returned to the `b.js` module. `b.js` then finishes loading, and its exports object is provided to the `a.js` module.
+When `main.js` loads `a.js`, then `a.js` in turn loads `b.js`. At that point, `b.js` tries to load `a.js`. In order to prevent an infinite loop, an **unfinished copy** of the `a.js`exports object is returned to the `b.js` module. `b.js` then finishes loading, and its exports object is provided to the `a.js` module.
 
 简单说就是，为了防止模块载入的死循环，Node.js 在模块第一次载入后会把它的结果进行缓存，下一次再对它进行载入的时候会直接从缓存中取出结果。所以在这种循环依赖情形下，不会有死循环，但是却会因为缓存造成模块没有按照我们预想的那样被导出（export，详细的案例分析见下文）。
 
@@ -127,9 +127,9 @@ A: after log b
 
 有趣的是，ES6 特性中已经有了更优秀的 `import/export` 模块加载机制，就不会存在这样的问题（原因参考 References 第5条），然而 Node.js 还并不支持。Github 上有人提出过这个问题，Node.js 基金会成员 [@bnoordhuis](https://github.com/bnoordhuis) 对此的回复是：
 
-> In a nutshell, `require()` is not going anywhere - removing it would break too much for too little gain - but we’ll almost certainly end up supporting ES6 import/export somehow, details TBD.
->
-> Support for ES6 modules first needs to land in V8.
+In a nutshell, `require()` is not going anywhere - removing it would break too much for too little gain - but we’ll almost certainly end up supporting ES6 import/export somehow, details TBD.
+
+Support for ES6 modules first needs to land in V8.
 
 详细的讨论可以到[这里](https://github.com/nodejs/help/issues/53)查看。
 
