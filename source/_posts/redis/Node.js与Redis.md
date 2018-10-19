@@ -1,6 +1,6 @@
 title: Node.js与Redis
 date: 2015-05-09 14:45:23
-tags: [redis]
+tags: [Redis]
 ---
 ### 1.简介
 ---

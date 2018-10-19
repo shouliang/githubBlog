@@ -1,6 +1,6 @@
 title: shell入门(1)
 date: 2014-07-05 14:45:23
-tags: [shell]
+tags: [Shell]
 ---
 ## shell简介
 

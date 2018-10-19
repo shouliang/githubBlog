@@ -1,6 +1,6 @@
 title: 一.什么是redis
 date: 2015-05-07 14:45:23
-tags: [redis]
+tags: [Redis]
 ---
 
 ### 1.什么是redis

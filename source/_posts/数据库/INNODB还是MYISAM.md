@@ -1,7 +1,7 @@
 title: INNODB还是MYISAM
 date: 2017-01-05 14:45:23
 
-tags: [存储]
+tags: [数据库]
 ---
 MyISAM 是MySQL中默认的存储引擎，一般来说不是有太多人关心这个东西。决定使用什么样的存储引擎是一个很tricky的事情，但是还是值我们去研究一下，这里的文章只考虑 MyISAM 和InnoDB这两个，因为这两个是最常见的。
 
