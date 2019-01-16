@@ -1,6 +1,6 @@
 title: 一.简介
 date: 2014-02-04 14:45:23
-tags: [Node.js_异步编程]
+tags: [Node.js_异步]
 ---
 
 ### 1.简介

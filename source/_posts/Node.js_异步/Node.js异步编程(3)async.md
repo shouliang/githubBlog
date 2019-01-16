@@ -1,6 +1,6 @@
 title: 三.async
 date: 2014-02-13 14:45:23
-tags: [Node.js_异步编程]
+tags: [Node.js_异步]
 ---
 
 ### async

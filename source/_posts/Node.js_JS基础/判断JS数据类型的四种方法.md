@@ -1,7 +1,7 @@
 title: 判断JS数据类型的四种方法
 date: 2016-06-05 22:16:53
 
-tags: [Node.js_JS基础]
+tags: [Node.js_基础]
 ---
 在 ECMAScript 规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示：
 
